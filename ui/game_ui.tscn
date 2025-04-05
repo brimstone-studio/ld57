@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://d45ofdc75fkr"]
+[gd_scene load_steps=2 format=3 uid="uid://d45ofdc75fkr"]
+
+[ext_resource type="Script" uid="uid://b28vk5142rmjg" path="res://ui/edit_button.gd" id="1_dcmab"]
 
 [node name="GameUI" type="Control"]
 layout_mode = 3
@@ -14,4 +16,10 @@ offset_left = 15.0
 offset_top = 11.0
 offset_right = 113.0
 offset_bottom = 109.0
-text = "Edit"
+toggle_mode = true
+autowrap_mode = 2
+script = ExtResource("1_dcmab")
+close_editing_text = "Save"
+open_editing_text = "Edit"
+
+[connection signal="toggled" from="EditButton" to="EditButton" method="_on_toggled"]

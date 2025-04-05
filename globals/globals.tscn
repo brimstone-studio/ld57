@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://b2y2kyc5ak06"]
+
+[ext_resource type="Script" uid="uid://bxbuxg73qyfma" path="res://globals/ship_editing_manager.gd" id="1_jmrm8"]
+
+[node name="Globals" type="Node"]
+
+[node name="ShipEditingManager" type="Node" parent="."]
+script = ExtResource("1_jmrm8")
