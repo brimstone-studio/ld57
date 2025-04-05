@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://b8p0oaligpadw"]
+
+[ext_resource type="PackedScene" uid="uid://bsvikc0ysdfhq" path="res://world/ship/ship.tscn" id="1_6xmxd"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_6xmxd"]
+viewport_path = NodePath("ShipRenderer/SubViewport")
+
+[sub_resource type="Environment" id="Environment_6xmxd"]
+background_mode = 1
+background_color = Color(0.199212, 0.428186, 1, 1)
+fog_enabled = true
+fog_light_color = Color(0.224467, 0.401304, 0.607932, 1)
+
+[node name="World" type="Node3D"]
+
+[node name="ShipRenderer" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0)
+texture = SubResource("ViewportTexture_6xmxd")
+
+[node name="SubViewport" type="SubViewport" parent="ShipRenderer"]
+transparent_bg = true
+
+[node name="Ship" parent="ShipRenderer/SubViewport" instance=ExtResource("1_6xmxd")]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 3.78279, 0)
+environment = SubResource("Environment_6xmxd")
+current = true

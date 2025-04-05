@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=4 uid="uid://bsvikc0ysdfhq"]
+[gd_scene load_steps=5 format=4 uid="uid://bsvikc0ysdfhq"]
 
 [ext_resource type="Texture2D" uid="uid://dhwmacxi42tk4" path="res://world/ship/debug_tileset.png" id="1_bdx0w"]
+[ext_resource type="Script" uid="uid://dvg6eowp401ax" path="res://world/ship/ship.gd" id="1_jakuc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jakuc"]
 texture = ExtResource("1_bdx0w")
@@ -15,6 +16,7 @@ tile_size = Vector2i(128, 128)
 sources/0 = SubResource("TileSetAtlasSource_jakuc")
 
 [node name="Ship" type="Node2D"]
+script = ExtResource("1_jakuc")
 
 [node name="TileMap" type="TileMapLayer" parent="."]
 scale = Vector2(0.5, 0.5)
