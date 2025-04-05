@@ -1,0 +1,356 @@
+[gd_scene load_steps=2 format=3 uid="uid://bet4q1u3cr00n"]
+
+[ext_resource type="Texture2D" uid="uid://d3x86y542qh0v" path="res://icon.svg" id="1_c4qgj"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 23.0
+grow_horizontal = 2
+text = "Building Mode"
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -352.0
+offset_top = -411.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="MoneyAmmount" type="Label" parent="Panel"]
+layout_mode = 1
+offset_left = 7.0
+offset_top = 10.0
+offset_right = 35.0
+offset_bottom = 33.0
+text = "$$$"
+
+[node name="ShopContainer" type="HBoxContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -173.0
+offset_top = -367.0
+offset_right = 173.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="VBoxContainerLeft" type="VBoxContainer" parent="Panel/ShopContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Button" type="Button" parent="Panel/ShopContainer/VBoxContainerLeft"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="Panel/ShopContainer/VBoxContainerLeft/Button"]
+position = Vector2(45, 45)
+scale = Vector2(0.51, 0.51)
+texture = ExtResource("1_c4qgj")
+
+[node name="Price" type="Label" parent="Panel/ShopContainer/VBoxContainerLeft/Button"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -86.0
+offset_top = 20.0
+offset_right = -7.0
+offset_bottom = 43.0
+grow_horizontal = 0
+text = "$6000"
+
+[node name="Room" type="Label" parent="Panel/ShopContainer/VBoxContainerLeft/Button"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -86.0
+offset_top = 45.0
+offset_right = -7.0
+offset_bottom = 68.0
+grow_horizontal = 0
+text = "Turret"
+
+[node name="Button2" type="Button" parent="Panel/ShopContainer/VBoxContainerLeft"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="Panel/ShopContainer/VBoxContainerLeft/Button2"]
+position = Vector2(45, 45)
+scale = Vector2(0.51, 0.51)
+texture = ExtResource("1_c4qgj")
+
+[node name="Price" type="Label" parent="Panel/ShopContainer/VBoxContainerLeft/Button2"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -86.0
+offset_top = 20.0
+offset_right = -7.0
+offset_bottom = 43.0
+grow_horizontal = 0
+text = "$100"
+
+[node name="Room" type="Label" parent="Panel/ShopContainer/VBoxContainerLeft/Button2"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -86.0
+offset_top = 45.0
+offset_right = -7.0
+offset_bottom = 68.0
+grow_horizontal = 0
+text = "Hallway"
+
+[node name="Button3" type="Button" parent="Panel/ShopContainer/VBoxContainerLeft"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="Panel/ShopContainer/VBoxContainerLeft/Button3"]
+position = Vector2(45, 45)
+scale = Vector2(0.51, 0.51)
+texture = ExtResource("1_c4qgj")
+
+[node name="Price" type="Label" parent="Panel/ShopContainer/VBoxContainerLeft/Button3"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -86.0
+offset_top = 20.0
+offset_right = -7.0
+offset_bottom = 43.0
+grow_horizontal = 0
+text = "$15000"
+
+[node name="Room" type="Label" parent="Panel/ShopContainer/VBoxContainerLeft/Button3"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -86.0
+offset_top = 45.0
+offset_right = -7.0
+offset_bottom = 68.0
+grow_horizontal = 0
+text = "Generator"
+
+[node name="Button4" type="Button" parent="Panel/ShopContainer/VBoxContainerLeft"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="Panel/ShopContainer/VBoxContainerLeft/Button4"]
+position = Vector2(45, 45)
+scale = Vector2(0.51, 0.51)
+texture = ExtResource("1_c4qgj")
+
+[node name="Price" type="Label" parent="Panel/ShopContainer/VBoxContainerLeft/Button4"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -86.0
+offset_top = 20.0
+offset_right = -7.0
+offset_bottom = 43.0
+grow_horizontal = 0
+text = "$10000"
+
+[node name="Room" type="Label" parent="Panel/ShopContainer/VBoxContainerLeft/Button4"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -86.0
+offset_top = 45.0
+offset_right = -7.0
+offset_bottom = 68.0
+grow_horizontal = 0
+text = "Drill"
+
+[node name="VBoxContainerRight" type="VBoxContainer" parent="Panel/ShopContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Button" type="Button" parent="Panel/ShopContainer/VBoxContainerRight"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="Panel/ShopContainer/VBoxContainerRight/Button"]
+position = Vector2(45, 45)
+scale = Vector2(0.51, 0.51)
+texture = ExtResource("1_c4qgj")
+
+[node name="Price" type="Label" parent="Panel/ShopContainer/VBoxContainerRight/Button"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -86.0
+offset_top = 20.0
+offset_right = -7.0
+offset_bottom = 43.0
+grow_horizontal = 0
+text = "$1000"
+
+[node name="Room" type="Label" parent="Panel/ShopContainer/VBoxContainerRight/Button"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -86.0
+offset_top = 45.0
+offset_right = -7.0
+offset_bottom = 68.0
+grow_horizontal = 0
+text = "Bedroom"
+
+[node name="Button2" type="Button" parent="Panel/ShopContainer/VBoxContainerRight"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="Panel/ShopContainer/VBoxContainerRight/Button2"]
+position = Vector2(45, 45)
+scale = Vector2(0.51, 0.51)
+texture = ExtResource("1_c4qgj")
+
+[node name="Price" type="Label" parent="Panel/ShopContainer/VBoxContainerRight/Button2"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -86.0
+offset_top = 20.0
+offset_right = -7.0
+offset_bottom = 43.0
+grow_horizontal = 0
+text = "$10000"
+
+[node name="Room" type="Label" parent="Panel/ShopContainer/VBoxContainerRight/Button2"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -86.0
+offset_top = 45.0
+offset_right = -7.0
+offset_bottom = 68.0
+grow_horizontal = 0
+text = "Oxigenator"
+
+[node name="Button3" type="Button" parent="Panel/ShopContainer/VBoxContainerRight"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="Panel/ShopContainer/VBoxContainerRight/Button3"]
+position = Vector2(45, 45)
+scale = Vector2(0.51, 0.51)
+texture = ExtResource("1_c4qgj")
+
+[node name="Price" type="Label" parent="Panel/ShopContainer/VBoxContainerRight/Button3"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -86.0
+offset_top = 20.0
+offset_right = -7.0
+offset_bottom = 43.0
+grow_horizontal = 0
+text = "$1500"
+
+[node name="Room" type="Label" parent="Panel/ShopContainer/VBoxContainerRight/Button3"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -86.0
+offset_top = 45.0
+offset_right = -7.0
+offset_bottom = 68.0
+grow_horizontal = 0
+text = "Kitchen"
+
+[node name="Button4" type="Button" parent="Panel/ShopContainer/VBoxContainerRight"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="Panel/ShopContainer/VBoxContainerRight/Button4"]
+position = Vector2(45, 45)
+scale = Vector2(0.51, 0.51)
+texture = ExtResource("1_c4qgj")
+
+[node name="Price" type="Label" parent="Panel/ShopContainer/VBoxContainerRight/Button4"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -86.0
+offset_top = 20.0
+offset_right = -7.0
+offset_bottom = 43.0
+grow_horizontal = 0
+text = "$4000"
+
+[node name="Room" type="Label" parent="Panel/ShopContainer/VBoxContainerRight/Button4"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -86.0
+offset_top = 45.0
+offset_right = -7.0
+offset_bottom = 68.0
+grow_horizontal = 0
+text = "Hydrophonics"
+
+[node name="Tools" type="HBoxContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -94.06
+offset_top = 2.0
+offset_right = -4.06
+offset_bottom = 42.0
+grow_horizontal = 0
+
+[node name="Door" type="Button" parent="Panel/Tools"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="Panel/Tools/Door"]
+position = Vector2(21.26, 19.2)
+scale = Vector2(0.175, 0.175)
+texture = ExtResource("1_c4qgj")
+
+[node name="Destroy" type="Button" parent="Panel/Tools"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="Panel/Tools/Destroy"]
+position = Vector2(21.26, 19.2)
+scale = Vector2(0.175, 0.175)
+texture = ExtResource("1_c4qgj")
