@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cdwechu3wh1ye"
-path="res://.godot/imported/Control.png-d4dabc65650771bd8518da9c2254e4b9.ctex"
+uid="uid://cqasgkceryh83"
+path="res://.godot/imported/Bedroom.png-57caaaa3e010e91fe845f925dfb233c0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://world/ship/parts/Control.png"
-dest_files=["res://.godot/imported/Control.png-d4dabc65650771bd8518da9c2254e4b9.ctex"]
+source_file="res://world/ship/parts/assets/Bedroom.png"
+dest_files=["res://.godot/imported/Bedroom.png-57caaaa3e010e91fe845f925dfb233c0.ctex"]
 
 [params]
 

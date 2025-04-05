@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cqasgkceryh83"
-path="res://.godot/imported/Bedroom.png-35e8707c9daf6067aa0b1b0264363d1d.ctex"
+uid="uid://d14e2dv2x3kv2"
+path="res://.godot/imported/turret.png-f160e56ab4081efccf8ae2be30130a2c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://world/ship/parts/Bedroom.png"
-dest_files=["res://.godot/imported/Bedroom.png-35e8707c9daf6067aa0b1b0264363d1d.ctex"]
+source_file="res://world/ship/parts/assets/turret.png"
+dest_files=["res://.godot/imported/turret.png-f160e56ab4081efccf8ae2be30130a2c.ctex"]
 
 [params]
 
