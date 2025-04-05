@@ -1,7 +1,8 @@
 class_name Part
 extends Node2D
 
-const GRID_SIZE = 128
+@export var grid_size_x: int = 128
+@export var grid_size_y: int = 128
 
 @onready var sprite: Sprite2D = $Sprite
 @onready var area_2d: Area2D = $Area2D
@@ -46,10 +47,10 @@ func _process(delta: float) -> void:
 		# follow mouse
 		var mouse_pos = get_viewport().get_mouse_position()
 		var snapped_pos = Vector2(
-			floor(mouse_pos.x / GRID_SIZE) * GRID_SIZE,
-			floor(mouse_pos.y / GRID_SIZE) * GRID_SIZE
+			floor(mouse_pos.x / grid_size_x) * grid_size_x,
+			floor(mouse_pos.y / grid_size_y) * grid_size_y
 		)
-		global_position = snapped_pos + Vector2(GRID_SIZE / 2, GRID_SIZE / 2)
+		global_position = snapped_pos + Vector2(grid_size_x / 2, grid_size_y / 2)
 		
 		# Rotate on right-click
 		if Input.is_action_just_pressed("rotate_room"):

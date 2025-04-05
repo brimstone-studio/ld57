@@ -3,7 +3,7 @@ extends Node
 signal money_increased
 signal money_decreased
 
-const INITIAL_MONEY: int = 2000
+const INITIAL_MONEY: int = 200000
 
 var _money: int
 var money: int:

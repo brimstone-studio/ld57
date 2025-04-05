@@ -81,6 +81,8 @@ size_flags_horizontal = 3
 layout_mode = 2
 size_flags_vertical = 3
 script = ExtResource("4_pylni")
+part_name = "turret"
+part_price = 6000
 
 [node name="Sprite2D" type="Sprite2D" parent="BuilderPanel2/ShopContainer/VBoxContainerLeft/Button"]
 position = Vector2(45, 45)
@@ -112,8 +114,12 @@ grow_horizontal = 0
 text = "Turret"
 
 [node name="Button2" type="Button" parent="BuilderPanel2/ShopContainer/VBoxContainerLeft"]
+visible = false
 layout_mode = 2
 size_flags_vertical = 3
+script = ExtResource("4_pylni")
+part_name = "hallway"
+part_price = 100
 
 [node name="Sprite2D" type="Sprite2D" parent="BuilderPanel2/ShopContainer/VBoxContainerLeft/Button2"]
 position = Vector2(45, 45)
@@ -147,6 +153,9 @@ text = "Hallway"
 [node name="Button3" type="Button" parent="BuilderPanel2/ShopContainer/VBoxContainerLeft"]
 layout_mode = 2
 size_flags_vertical = 3
+script = ExtResource("4_pylni")
+part_name = "core"
+part_price = 15000
 
 [node name="Sprite2D" type="Sprite2D" parent="BuilderPanel2/ShopContainer/VBoxContainerLeft/Button3"]
 position = Vector2(45, 45)
@@ -180,6 +189,9 @@ text = "Generator"
 [node name="Button4" type="Button" parent="BuilderPanel2/ShopContainer/VBoxContainerLeft"]
 layout_mode = 2
 size_flags_vertical = 3
+script = ExtResource("4_pylni")
+part_name = "drill"
+part_price = 10000
 
 [node name="Sprite2D" type="Sprite2D" parent="BuilderPanel2/ShopContainer/VBoxContainerLeft/Button4"]
 position = Vector2(45, 45)
@@ -251,8 +263,12 @@ grow_horizontal = 0
 text = "Bedroom"
 
 [node name="Button2" type="Button" parent="BuilderPanel2/ShopContainer/VBoxContainerRight"]
+visible = false
 layout_mode = 2
 size_flags_vertical = 3
+script = ExtResource("4_pylni")
+part_name = "oxigenator"
+part_price = 10000
 
 [node name="Sprite2D" type="Sprite2D" parent="BuilderPanel2/ShopContainer/VBoxContainerRight/Button2"]
 position = Vector2(45, 45)
@@ -284,8 +300,12 @@ grow_horizontal = 0
 text = "Oxigenator"
 
 [node name="Button3" type="Button" parent="BuilderPanel2/ShopContainer/VBoxContainerRight"]
+visible = false
 layout_mode = 2
 size_flags_vertical = 3
+script = ExtResource("4_pylni")
+part_name = "kitchen"
+part_price = 1500
 
 [node name="Sprite2D" type="Sprite2D" parent="BuilderPanel2/ShopContainer/VBoxContainerRight/Button3"]
 position = Vector2(45, 45)
@@ -317,8 +337,12 @@ grow_horizontal = 0
 text = "Kitchen"
 
 [node name="Button4" type="Button" parent="BuilderPanel2/ShopContainer/VBoxContainerRight"]
+visible = false
 layout_mode = 2
 size_flags_vertical = 3
+script = ExtResource("4_pylni")
+part_name = "hydrophonics"
+part_price = 4000
 
 [node name="Sprite2D" type="Sprite2D" parent="BuilderPanel2/ShopContainer/VBoxContainerRight/Button4"]
 position = Vector2(45, 45)
