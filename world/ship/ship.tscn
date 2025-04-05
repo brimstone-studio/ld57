@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://bsvikc0ysdfhq"]
+[gd_scene load_steps=4 format=4 uid="uid://bsvikc0ysdfhq"]
 
 [ext_resource type="Texture2D" uid="uid://dhwmacxi42tk4" path="res://world/ship/debug_tileset.png" id="1_bdx0w"]
 
@@ -17,4 +17,6 @@ sources/0 = SubResource("TileSetAtlasSource_jakuc")
 [node name="Ship" type="Node2D"]
 
 [node name="TileMap" type="TileMapLayer" parent="."]
+scale = Vector2(0.5, 0.5)
+tile_map_data = PackedByteArray("AAABAAEAAAAAAAAAAAACAAEAAAAAAAAAAAADAAEAAAAAAAAAAAAEAAEAAAAAAAAAAAAEAAIAAAAAAAAAAAADAAIAAAAAAAAAAAACAAIAAAAAAAAAAAA=")
 tile_set = SubResource("TileSet_xt64x")
