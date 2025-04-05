@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://odxp07ckdnmh"]
+
+[ext_resource type="Texture2D" uid="uid://dhqo7oohn021y" path="res://world/ship/parts/debug_hallway.png" id="1_7qgij"]
+
+[node name="PartHallway" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_7qgij")

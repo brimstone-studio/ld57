@@ -15,6 +15,11 @@ run/main_scene="uid://cpekmx4f4xg7q"
 config/features=PackedStringArray("4.4", "Mobile")
 config/icon="res://icon.svg"
 
+[autoload]
+
+ShipEditingManager="*res://globals/ship_editing_manager.gd"
+MoneyManager="*res://globals/money_manager.gd"
+
 [display]
 
 window/stretch/mode="viewport"

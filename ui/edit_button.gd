@@ -9,5 +9,7 @@ func _ready():
 func _on_toggled(toggled_on: bool) -> void:
 	if toggled_on:
 		text = close_editing_text
+		ShipEditingManager.is_editing = true
 	else:
 		text = open_editing_text
+		ShipEditingManager.is_editing = false
