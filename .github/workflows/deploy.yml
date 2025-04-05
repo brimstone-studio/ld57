@@ -1,0 +1,36 @@
+name: Deploy to Itch.io
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  export-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Set up Godot
+        uses: firebelley/setup-godot@v1
+        with:
+          version: 4.4.1 
+          export-templates: true
+
+      - name: Export HTML5 build
+        run: godot --headless --export-release "HTML5"
+
+      - name: Install Butler
+        run: |
+          curl -L -o butler.zip https://broth.itch.ovh/butler/linux-amd64/LATEST/archive/default
+          unzip butler.zip -d butler
+          chmod +x butler/butler
+          sudo mv butler/butler /usr/local/bin/
+
+      - name: Deploy to Itch.io
+        env:
+          BUTLER_API_KEY: ${{ secrets.BUTLER_API_KEY }}
+        run: |
+          butler push build/web brimstone-studio/ld57:html5
