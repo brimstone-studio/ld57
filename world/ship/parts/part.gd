@@ -1,3 +1,4 @@
+class_name Part
 extends Node2D
 
 const GRID_SIZE = 128
@@ -5,12 +6,12 @@ const GRID_SIZE = 128
 @onready var sprite: Sprite2D = $Sprite
 @onready var area_2d: Area2D = $Area2D
 
-var _is_ghost_mode: bool
+var _is_ghost_mode: bool = false
 var is_ghost_mode: bool:
 	get:
 		return _is_ghost_mode
 	set(value):
-		if(_is_ghost_mode == true):
+		if(value == true):
 			_ghost_mode_turned_on()
 		else:
 			_ghost_mode_turned_off()
@@ -22,10 +23,13 @@ func _ghost_mode_turned_on() -> void:
 
 func _ghost_mode_turned_off() -> void:
 	sprite.modulate.a = 1
+	sprite.modulate.r = 1
+	sprite.modulate.g = 1
+	sprite.modulate.b = 1
 
 func _physics_process(delta: float) -> void:
 	if is_ghost_mode:
-		# can be placed
+		# can be placed?
 		if area_2d.has_overlapping_areas():
 			sprite.modulate.r = 0
 			sprite.modulate.b = 0
@@ -50,6 +54,7 @@ func _process(delta: float) -> void:
 		# Rotate on right-click
 		if Input.is_action_just_pressed("rotate_room"):
 			rotation += deg_to_rad(90)
-
-func _init():
-	is_ghost_mode = false
+			
+		if Input.is_action_just_pressed("place_room"):
+			if _is_placable == true && is_ghost_mode == true:
+				is_ghost_mode = false

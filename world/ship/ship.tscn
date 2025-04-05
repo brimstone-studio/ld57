@@ -7,6 +7,4 @@
 script = ExtResource("1_jakuc")
 
 [node name="PartBedroom" parent="." instance=ExtResource("3_r8adt")]
-
-[node name="PartBedroom2" parent="." instance=ExtResource("3_r8adt")]
-position = Vector2(640, 384)
+position = Vector2(192, 192)

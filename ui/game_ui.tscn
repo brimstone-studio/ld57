@@ -4,9 +4,7 @@
 [ext_resource type="Script" uid="uid://64ok6ygtscux" path="res://ui/builder_panel.gd" id="2_7hrjk"]
 [ext_resource type="Script" uid="uid://c0dyigwh4aigc" path="res://ui/money_label.gd" id="2_w46tp"]
 [ext_resource type="Script" uid="uid://opb23n06lfmo" path="res://ui/buy_part.gd" id="4_pylni"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_dcmab"]
-font_size = 32
+[ext_resource type="Texture2D" uid="uid://d3x86y542qh0v" path="res://icon.svg" id="5_3vkek"]
 
 [node name="GameUI" type="Control"]
 layout_mode = 3
@@ -28,48 +26,356 @@ script = ExtResource("1_dcmab")
 close_editing_text = "Save"
 open_editing_text = "Edit"
 
-[node name="BuilderPanel" type="Panel" parent="."]
+[node name="BuilderPanel2" type="Panel" parent="."]
 layout_mode = 1
-anchors_preset = 11
+anchors_preset = 3
 anchor_left = 1.0
+anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -361.0
+offset_left = -352.0
+offset_top = -411.0
 grow_horizontal = 0
-grow_vertical = 2
+grow_vertical = 0
 script = ExtResource("2_7hrjk")
 
-[node name="MoneyLabel" type="Label" parent="BuilderPanel"]
+[node name="BuildingModeLabel" type="Label" parent="BuilderPanel2"]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -142.5
-offset_top = 24.0
-offset_right = 142.5
-offset_bottom = 77.0
+offset_left = -456.0
+offset_top = -237.0
+offset_right = -344.0
+offset_bottom = -214.0
 grow_horizontal = 2
-text = "??? ᖬ"
-label_settings = SubResource("LabelSettings_dcmab")
-horizontal_alignment = 1
-vertical_alignment = 1
+text = "Building Mode"
+
+[node name="MoneyLabel" type="Label" parent="BuilderPanel2"]
+layout_mode = 1
+offset_left = 7.0
+offset_top = 10.0
+offset_right = 35.0
+offset_bottom = 33.0
+text = "$$$"
 script = ExtResource("2_w46tp")
 
-[node name="BuyPart" type="Button" parent="BuilderPanel"]
+[node name="ShopContainer" type="HBoxContainer" parent="BuilderPanel2"]
 layout_mode = 1
-anchors_preset = 8
+anchors_preset = 7
 anchor_left = 0.5
-anchor_top = 0.5
+anchor_top = 1.0
 anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -158.5
-offset_top = -220.0
-offset_right = -0.5
-offset_bottom = -153.0
+anchor_bottom = 1.0
+offset_left = -173.0
+offset_top = -367.0
+offset_right = 173.0
 grow_horizontal = 2
-grow_vertical = 2
-text = "Hallway
-250ᖬ"
+grow_vertical = 0
+
+[node name="VBoxContainerLeft" type="VBoxContainer" parent="BuilderPanel2/ShopContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Button" type="Button" parent="BuilderPanel2/ShopContainer/VBoxContainerLeft"]
+layout_mode = 2
+size_flags_vertical = 3
 script = ExtResource("4_pylni")
+
+[node name="Sprite2D" type="Sprite2D" parent="BuilderPanel2/ShopContainer/VBoxContainerLeft/Button"]
+position = Vector2(45, 45)
+scale = Vector2(0.51, 0.51)
+texture = ExtResource("5_3vkek")
+
+[node name="Price" type="Label" parent="BuilderPanel2/ShopContainer/VBoxContainerLeft/Button"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -86.0
+offset_top = 20.0
+offset_right = -7.0
+offset_bottom = 43.0
+grow_horizontal = 0
+text = "$6000"
+
+[node name="Room" type="Label" parent="BuilderPanel2/ShopContainer/VBoxContainerLeft/Button"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -86.0
+offset_top = 45.0
+offset_right = -7.0
+offset_bottom = 68.0
+grow_horizontal = 0
+text = "Turret"
+
+[node name="Button2" type="Button" parent="BuilderPanel2/ShopContainer/VBoxContainerLeft"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="BuilderPanel2/ShopContainer/VBoxContainerLeft/Button2"]
+position = Vector2(45, 45)
+scale = Vector2(0.51, 0.51)
+texture = ExtResource("5_3vkek")
+
+[node name="Price" type="Label" parent="BuilderPanel2/ShopContainer/VBoxContainerLeft/Button2"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -86.0
+offset_top = 20.0
+offset_right = -7.0
+offset_bottom = 43.0
+grow_horizontal = 0
+text = "$100"
+
+[node name="Room" type="Label" parent="BuilderPanel2/ShopContainer/VBoxContainerLeft/Button2"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -86.0
+offset_top = 45.0
+offset_right = -7.0
+offset_bottom = 68.0
+grow_horizontal = 0
+text = "Hallway"
+
+[node name="Button3" type="Button" parent="BuilderPanel2/ShopContainer/VBoxContainerLeft"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="BuilderPanel2/ShopContainer/VBoxContainerLeft/Button3"]
+position = Vector2(45, 45)
+scale = Vector2(0.51, 0.51)
+texture = ExtResource("5_3vkek")
+
+[node name="Price" type="Label" parent="BuilderPanel2/ShopContainer/VBoxContainerLeft/Button3"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -86.0
+offset_top = 20.0
+offset_right = -7.0
+offset_bottom = 43.0
+grow_horizontal = 0
+text = "$15000"
+
+[node name="Room" type="Label" parent="BuilderPanel2/ShopContainer/VBoxContainerLeft/Button3"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -86.0
+offset_top = 45.0
+offset_right = -7.0
+offset_bottom = 68.0
+grow_horizontal = 0
+text = "Generator"
+
+[node name="Button4" type="Button" parent="BuilderPanel2/ShopContainer/VBoxContainerLeft"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="BuilderPanel2/ShopContainer/VBoxContainerLeft/Button4"]
+position = Vector2(45, 45)
+scale = Vector2(0.51, 0.51)
+texture = ExtResource("5_3vkek")
+
+[node name="Price" type="Label" parent="BuilderPanel2/ShopContainer/VBoxContainerLeft/Button4"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -86.0
+offset_top = 20.0
+offset_right = -7.0
+offset_bottom = 43.0
+grow_horizontal = 0
+text = "$10000"
+
+[node name="Room" type="Label" parent="BuilderPanel2/ShopContainer/VBoxContainerLeft/Button4"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -86.0
+offset_top = 45.0
+offset_right = -7.0
+offset_bottom = 68.0
+grow_horizontal = 0
+text = "Drill"
+
+[node name="VBoxContainerRight" type="VBoxContainer" parent="BuilderPanel2/ShopContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Button" type="Button" parent="BuilderPanel2/ShopContainer/VBoxContainerRight"]
+layout_mode = 2
+size_flags_vertical = 3
+script = ExtResource("4_pylni")
+part_name = "bedroom"
+part_price = 1000
+
+[node name="Sprite2D" type="Sprite2D" parent="BuilderPanel2/ShopContainer/VBoxContainerRight/Button"]
+position = Vector2(45, 45)
+scale = Vector2(0.51, 0.51)
+texture = ExtResource("5_3vkek")
+
+[node name="Price" type="Label" parent="BuilderPanel2/ShopContainer/VBoxContainerRight/Button"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -86.0
+offset_top = 20.0
+offset_right = -7.0
+offset_bottom = 43.0
+grow_horizontal = 0
+text = "$1000"
+
+[node name="Room" type="Label" parent="BuilderPanel2/ShopContainer/VBoxContainerRight/Button"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -86.0
+offset_top = 45.0
+offset_right = -7.0
+offset_bottom = 68.0
+grow_horizontal = 0
+text = "Bedroom"
+
+[node name="Button2" type="Button" parent="BuilderPanel2/ShopContainer/VBoxContainerRight"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="BuilderPanel2/ShopContainer/VBoxContainerRight/Button2"]
+position = Vector2(45, 45)
+scale = Vector2(0.51, 0.51)
+texture = ExtResource("5_3vkek")
+
+[node name="Price" type="Label" parent="BuilderPanel2/ShopContainer/VBoxContainerRight/Button2"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -86.0
+offset_top = 20.0
+offset_right = -7.0
+offset_bottom = 43.0
+grow_horizontal = 0
+text = "$10000"
+
+[node name="Room" type="Label" parent="BuilderPanel2/ShopContainer/VBoxContainerRight/Button2"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -86.0
+offset_top = 45.0
+offset_right = -7.0
+offset_bottom = 68.0
+grow_horizontal = 0
+text = "Oxigenator"
+
+[node name="Button3" type="Button" parent="BuilderPanel2/ShopContainer/VBoxContainerRight"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="BuilderPanel2/ShopContainer/VBoxContainerRight/Button3"]
+position = Vector2(45, 45)
+scale = Vector2(0.51, 0.51)
+texture = ExtResource("5_3vkek")
+
+[node name="Price" type="Label" parent="BuilderPanel2/ShopContainer/VBoxContainerRight/Button3"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -86.0
+offset_top = 20.0
+offset_right = -7.0
+offset_bottom = 43.0
+grow_horizontal = 0
+text = "$1500"
+
+[node name="Room" type="Label" parent="BuilderPanel2/ShopContainer/VBoxContainerRight/Button3"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -86.0
+offset_top = 45.0
+offset_right = -7.0
+offset_bottom = 68.0
+grow_horizontal = 0
+text = "Kitchen"
+
+[node name="Button4" type="Button" parent="BuilderPanel2/ShopContainer/VBoxContainerRight"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="BuilderPanel2/ShopContainer/VBoxContainerRight/Button4"]
+position = Vector2(45, 45)
+scale = Vector2(0.51, 0.51)
+texture = ExtResource("5_3vkek")
+
+[node name="Price" type="Label" parent="BuilderPanel2/ShopContainer/VBoxContainerRight/Button4"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -86.0
+offset_top = 20.0
+offset_right = -7.0
+offset_bottom = 43.0
+grow_horizontal = 0
+text = "$4000"
+
+[node name="Room" type="Label" parent="BuilderPanel2/ShopContainer/VBoxContainerRight/Button4"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -86.0
+offset_top = 45.0
+offset_right = -7.0
+offset_bottom = 68.0
+grow_horizontal = 0
+text = "Hydrophonics"
+
+[node name="Tools" type="HBoxContainer" parent="BuilderPanel2"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -94.06
+offset_top = 2.0
+offset_right = -4.06
+offset_bottom = 42.0
+grow_horizontal = 0
+
+[node name="Door" type="Button" parent="BuilderPanel2/Tools"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="BuilderPanel2/Tools/Door"]
+position = Vector2(21.26, 19.2)
+scale = Vector2(0.175, 0.175)
+texture = ExtResource("5_3vkek")
+
+[node name="Destroy" type="Button" parent="BuilderPanel2/Tools"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="BuilderPanel2/Tools/Destroy"]
+position = Vector2(21.26, 19.2)
+scale = Vector2(0.175, 0.175)
+texture = ExtResource("5_3vkek")
 
 [connection signal="toggled" from="EditButton" to="EditButton" method="_on_toggled"]

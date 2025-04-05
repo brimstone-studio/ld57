@@ -5,6 +5,6 @@
 
 [node name="Game" type="Node"]
 
-[node name="GameUI" parent="." instance=ExtResource("1_80nbo")]
-
 [node name="World" parent="." instance=ExtResource("2_e2o6t")]
+
+[node name="GameUI" parent="." instance=ExtResource("1_80nbo")]
