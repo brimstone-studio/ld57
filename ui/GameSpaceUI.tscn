@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://c0n1ecnhpm6jq"]
+[gd_scene load_steps=7 format=3 uid="uid://c0n1ecnhpm6jq"]
 
 [ext_resource type="Texture2D" uid="uid://bgq4j76pnxxqf" path="res://ui/Assets/Crewmate.png" id="1_1e56o"]
 [ext_resource type="Texture2D" uid="uid://dta3nsymq17rm" path="res://ui/Assets/Icons/DrillIcon.png" id="2_tahe1"]
-[ext_resource type="Texture2D" uid="uid://b3ps73aqjs7sq" path="res://ui/Assets/Icons/FoodIcon.png" id="3_b8h37"]
+[ext_resource type="Texture2D" uid="uid://cg623ieogwpl1" path="res://ui/Assets/Icons/RoamingIcon.png" id="3_b8h37"]
 [ext_resource type="Texture2D" uid="uid://3fucnebebai1" path="res://ui/Assets/Icons/ShootIcon.png" id="4_a6mfk"]
+[ext_resource type="Texture2D" uid="uid://c35ojsqux8puq" path="res://ui/Assets/Icons/BuildIcon.png" id="5_b8h37"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_05xaj"]
 bg_color = Color(0.69, 0.69, 0, 1)
@@ -35,7 +36,7 @@ size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 28
 text = "Morning"
 
-[node name="depthLabel" type="Label" parent="TopPanel/TopLeftContainer"]
+[node name="depthLabelTxt" type="Label" parent="TopPanel/TopLeftContainer"]
 layout_mode = 2
 size_flags_horizontal = 10
 theme_override_font_sizes/font_size = 28
@@ -135,6 +136,7 @@ grow_vertical = 0
 [node name="Crewmate1" type="Button" parent="CrewmateSelectBar"]
 layout_mode = 2
 icon = ExtResource("1_1e56o")
+icon_alignment = 1
 
 [node name="EnergyIndicator" type="ProgressBar" parent="CrewmateSelectBar/Crewmate1"]
 layout_mode = 1
@@ -154,13 +156,14 @@ fill_mode = 3
 show_percentage = false
 
 [node name="StatusIndicator" type="Sprite2D" parent="CrewmateSelectBar/Crewmate1"]
-position = Vector2(28, 109)
+position = Vector2(28, 27.905)
 scale = Vector2(0.3125, 0.3125)
 texture = ExtResource("2_tahe1")
 
 [node name="Crewmate2" type="Button" parent="CrewmateSelectBar"]
 layout_mode = 2
 icon = ExtResource("1_1e56o")
+icon_alignment = 1
 
 [node name="EnergyIndicator" type="ProgressBar" parent="CrewmateSelectBar/Crewmate2"]
 layout_mode = 1
@@ -180,13 +183,14 @@ fill_mode = 3
 show_percentage = false
 
 [node name="StatusIndicator" type="Sprite2D" parent="CrewmateSelectBar/Crewmate2"]
-position = Vector2(28, 109)
+position = Vector2(28, 27.905)
 scale = Vector2(0.3125, 0.3125)
 texture = ExtResource("3_b8h37")
 
 [node name="Crewmate3" type="Button" parent="CrewmateSelectBar"]
 layout_mode = 2
 icon = ExtResource("1_1e56o")
+icon_alignment = 1
 
 [node name="EnergyIndicator" type="ProgressBar" parent="CrewmateSelectBar/Crewmate3"]
 layout_mode = 1
@@ -206,6 +210,22 @@ fill_mode = 3
 show_percentage = false
 
 [node name="StatusIndicator" type="Sprite2D" parent="CrewmateSelectBar/Crewmate3"]
-position = Vector2(28, 109)
+position = Vector2(28, 27.905)
 scale = Vector2(0.3125, 0.3125)
 texture = ExtResource("4_a6mfk")
+
+[node name="BuildButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -355.0
+offset_top = -78.0
+offset_right = -279.0
+offset_bottom = -2.0
+grow_horizontal = 0
+grow_vertical = 0
+icon = ExtResource("5_b8h37")
+expand_icon = true
