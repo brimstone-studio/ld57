@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cv65r1igyuk2b"
-path="res://.godot/imported/CrewmateHead.png-be757b68b534f479c8088da9b131b693.ctex"
+uid="uid://uu48ledc0jhp"
+path="res://.godot/imported/Junk2.png-042a2e0dfa080cf5ec208fe4b77eb9e5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ui/Assets/Icons/CrewmateHead.png"
-dest_files=["res://.godot/imported/CrewmateHead.png-be757b68b534f479c8088da9b131b693.ctex"]
+source_file="res://world/Background/Junk2.png"
+dest_files=["res://.godot/imported/Junk2.png-042a2e0dfa080cf5ec208fe4b77eb9e5.ctex"]
 
 [params]
 

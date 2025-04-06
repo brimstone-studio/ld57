@@ -1,13 +1,14 @@
-[gd_scene load_steps=5 format=3 uid="uid://cxkj6irja1nfj"]
+[gd_scene load_steps=7 format=3 uid="uid://cxkj6irja1nfj"]
 
 [ext_resource type="Texture2D" uid="uid://r5rvlbib5rnt" path="res://ui/Assets/Icons/Enemy.png" id="1_ntrfh"]
+[ext_resource type="Texture2D" uid="uid://bmshetvsq4r3q" path="res://ui/Assets/Icons/AuOre.png" id="2_3ccub"]
+[ext_resource type="Texture2D" uid="uid://bogfvnyurte50" path="res://ui/Assets/Icons/RhOre.png" id="3_pcnba"]
+[ext_resource type="Texture2D" uid="uid://cxkrfixqafckc" path="res://ui/Assets/Icons/UOre.png" id="4_c1t5g"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ih7qu"]
 bg_color = Color(1, 0, 0, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ntrfh"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tw3du"]
 
 [node name="NavigatorPanelPop-up" type="Control"]
 layout_mode = 3
@@ -264,21 +265,6 @@ theme_override_font_sizes/font_size = 28
 text = "2"
 horizontal_alignment = 2
 
-[node name="Panel" type="Panel" parent="NavigatorPanel"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -262.0
-offset_top = -95.0
-offset_right = -218.0
-offset_bottom = 96.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_tw3du")
-
 [node name="Label" type="Label" parent="NavigatorPanel"]
 layout_mode = 1
 anchors_preset = 7
@@ -293,3 +279,18 @@ offset_bottom = -8.12
 grow_horizontal = 2
 grow_vertical = 0
 text = "Choose the difficulty of the Shift"
+
+[node name="AuOre" type="Sprite2D" parent="NavigatorPanel"]
+position = Vector2(253.92, 258.92)
+scale = Vector2(0.28, 0.28)
+texture = ExtResource("2_3ccub")
+
+[node name="RhOre" type="Sprite2D" parent="NavigatorPanel"]
+position = Vector2(254.92, 158.92)
+scale = Vector2(0.28, 0.28)
+texture = ExtResource("3_pcnba")
+
+[node name="UOre" type="Sprite2D" parent="NavigatorPanel"]
+position = Vector2(254.92, 207.92)
+scale = Vector2(0.28, 0.28)
+texture = ExtResource("4_c1t5g")

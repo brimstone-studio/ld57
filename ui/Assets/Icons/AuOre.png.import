@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://clxom11ft2js8"
-path="res://.godot/imported/CrewmateBody.png-4949acfd17bb58c369d5487873dafdcf.ctex"
+uid="uid://bmshetvsq4r3q"
+path="res://.godot/imported/AuOre.png-0a91c841414e533540a4e61513e572ab.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ui/Assets/Icons/CrewmateBody.png"
-dest_files=["res://.godot/imported/CrewmateBody.png-4949acfd17bb58c369d5487873dafdcf.ctex"]
+source_file="res://ui/Assets/Icons/AuOre.png"
+dest_files=["res://.godot/imported/AuOre.png-0a91c841414e533540a4e61513e572ab.ctex"]
 
 [params]
 

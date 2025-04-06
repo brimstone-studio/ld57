@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://bvs3hj3dh0nks"]
+
+[ext_resource type="PackedScene" uid="uid://br4dqkgg1to18" path="res://world/Crewmates/crewmate.tscn" id="2_cu6cw"]
+
+[node name="MovingAroundTest" type="Node2D"]
+
+[node name="Crewmate" parent="." instance=ExtResource("2_cu6cw")]
+position = Vector2(227, 365)
+
+[node name="Crewmate2" parent="." instance=ExtResource("2_cu6cw")]
+position = Vector2(407, 334)
+
+[node name="Crewmate3" parent="." instance=ExtResource("2_cu6cw")]
+position = Vector2(610, 365)
