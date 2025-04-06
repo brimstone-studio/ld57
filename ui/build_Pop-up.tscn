@@ -1,6 +1,14 @@
-[gd_scene load_steps=2 format=3 uid="uid://bet4q1u3cr00n"]
+[gd_scene load_steps=10 format=3 uid="uid://bet4q1u3cr00n"]
 
-[ext_resource type="Texture2D" uid="uid://d3x86y542qh0v" path="res://icon.svg" id="1_c4qgj"]
+[ext_resource type="Texture2D" uid="uid://infv8w0hk2i1" path="res://ui/Assets/DoorIcon.png" id="1_p5ivr"]
+[ext_resource type="Texture2D" uid="uid://cke8vs45icjdq" path="res://ui/Assets/TrashIcon.png" id="2_j740u"]
+[ext_resource type="Texture2D" uid="uid://d14e2dv2x3kv2" path="res://world/ship/parts/assets/turret.png" id="2_whyek"]
+[ext_resource type="Texture2D" uid="uid://dmjbs4ust74tt" path="res://world/ship/parts/assets/Kitchen.png" id="3_0rae1"]
+[ext_resource type="Texture2D" uid="uid://cqasgkceryh83" path="res://world/ship/parts/assets/Bedroom.png" id="4_p5ivr"]
+[ext_resource type="Texture2D" uid="uid://cgfgpk7dakghk" path="res://world/ship/parts/assets/Drill.png" id="5_j740u"]
+[ext_resource type="Texture2D" uid="uid://bgq4j76pnxxqf" path="res://ui/Assets/Crewmate.png" id="6_2x5h8"]
+[ext_resource type="Texture2D" uid="uid://dogl5s1s3oo63" path="res://world/ship/parts/assets/Hydro.png" id="6_oxa30"]
+[ext_resource type="Texture2D" uid="uid://cksu46dc07pwt" path="res://world/ship/parts/assets/Hallway.png" id="7_2x5h8"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -50,8 +58,8 @@ size_flags_horizontal = 3
 
 [node name="Sprite2D" type="Sprite2D" parent="Panel/Tools/Door"]
 position = Vector2(21.26, 19.2)
-scale = Vector2(0.175, 0.175)
-texture = ExtResource("1_c4qgj")
+scale = Vector2(0.305, 0.305)
+texture = ExtResource("1_p5ivr")
 
 [node name="Destroy" type="Button" parent="Panel/Tools"]
 layout_mode = 2
@@ -59,8 +67,8 @@ size_flags_horizontal = 3
 
 [node name="Sprite2D" type="Sprite2D" parent="Panel/Tools/Destroy"]
 position = Vector2(21.26, 19.2)
-scale = Vector2(0.175, 0.175)
-texture = ExtResource("1_c4qgj")
+scale = Vector2(0.225, 0.225)
+texture = ExtResource("2_j740u")
 
 [node name="ShopContainer" type="HBoxContainer" parent="Panel"]
 layout_mode = 1
@@ -85,8 +93,9 @@ size_flags_vertical = 3
 
 [node name="Sprite2D" type="Sprite2D" parent="Panel/ShopContainer/VBoxContainerLeft/Button"]
 position = Vector2(45, 45)
-scale = Vector2(0.51, 0.51)
-texture = ExtResource("1_c4qgj")
+rotation = 0.785398
+scale = Vector2(0.22, 0.22)
+texture = ExtResource("2_whyek")
 
 [node name="Price" type="Label" parent="Panel/ShopContainer/VBoxContainerLeft/Button"]
 layout_mode = 1
@@ -117,9 +126,10 @@ layout_mode = 2
 size_flags_vertical = 3
 
 [node name="Sprite2D" type="Sprite2D" parent="Panel/ShopContainer/VBoxContainerLeft/Button2"]
-position = Vector2(45, 45)
-scale = Vector2(0.51, 0.51)
-texture = ExtResource("1_c4qgj")
+position = Vector2(59.45, 45)
+scale = Vector2(0.255, 0.255)
+texture = ExtResource("3_0rae1")
+flip_h = true
 
 [node name="Price" type="Label" parent="Panel/ShopContainer/VBoxContainerLeft/Button2"]
 layout_mode = 1
@@ -151,8 +161,8 @@ size_flags_vertical = 3
 
 [node name="Sprite2D" type="Sprite2D" parent="Panel/ShopContainer/VBoxContainerLeft/Button3"]
 position = Vector2(45, 45)
-scale = Vector2(0.51, 0.51)
-texture = ExtResource("1_c4qgj")
+scale = Vector2(0.28, 0.28)
+texture = ExtResource("4_p5ivr")
 
 [node name="Price" type="Label" parent="Panel/ShopContainer/VBoxContainerLeft/Button3"]
 layout_mode = 1
@@ -184,8 +194,8 @@ size_flags_vertical = 3
 
 [node name="Sprite2D" type="Sprite2D" parent="Panel/ShopContainer/VBoxContainerLeft/Button4"]
 position = Vector2(45, 45)
-scale = Vector2(0.51, 0.51)
-texture = ExtResource("1_c4qgj")
+scale = Vector2(0.67, 0.67)
+texture = ExtResource("6_2x5h8")
 
 [node name="Price" type="Label" parent="Panel/ShopContainer/VBoxContainerLeft/Button4"]
 layout_mode = 1
@@ -221,8 +231,9 @@ size_flags_vertical = 3
 
 [node name="Sprite2D" type="Sprite2D" parent="Panel/ShopContainer/VBoxContainerRight/Button"]
 position = Vector2(45, 45)
-scale = Vector2(0.51, 0.51)
-texture = ExtResource("1_c4qgj")
+rotation = 0.785398
+scale = Vector2(0.19, 0.19)
+texture = ExtResource("5_j740u")
 
 [node name="Price" type="Label" parent="Panel/ShopContainer/VBoxContainerRight/Button"]
 layout_mode = 1
@@ -254,8 +265,8 @@ size_flags_vertical = 3
 
 [node name="Sprite2D" type="Sprite2D" parent="Panel/ShopContainer/VBoxContainerRight/Button2"]
 position = Vector2(45, 45)
-scale = Vector2(0.51, 0.51)
-texture = ExtResource("1_c4qgj")
+scale = Vector2(0.285, 0.285)
+texture = ExtResource("6_oxa30")
 
 [node name="Price" type="Label" parent="Panel/ShopContainer/VBoxContainerRight/Button2"]
 layout_mode = 1
@@ -287,8 +298,9 @@ size_flags_vertical = 3
 
 [node name="Sprite2D" type="Sprite2D" parent="Panel/ShopContainer/VBoxContainerRight/Button3"]
 position = Vector2(45, 45)
-scale = Vector2(0.51, 0.51)
-texture = ExtResource("1_c4qgj")
+rotation = 0.785398
+scale = Vector2(0.22, 0.22)
+texture = ExtResource("7_2x5h8")
 
 [node name="Price" type="Label" parent="Panel/ShopContainer/VBoxContainerRight/Button3"]
 layout_mode = 1
