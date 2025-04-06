@@ -1,0 +1,160 @@
+[gd_scene load_steps=2 format=3 uid="uid://c0n1ecnhpm6jq"]
+
+[ext_resource type="Texture2D" uid="uid://bgq4j76pnxxqf" path="res://ui/Assets/Crewmate.png" id="1_1e56o"]
+
+[node name="GameSpaceUi" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TopPanel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 42.0
+grow_horizontal = 2
+
+[node name="TopLeftContainer" type="HBoxContainer" parent="TopPanel"]
+layout_mode = 0
+offset_left = 7.0
+offset_right = 284.0
+offset_bottom = 40.0
+
+[node name="gameStateLabel" type="Label" parent="TopPanel/TopLeftContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 28
+text = "Morning"
+
+[node name="depthLabel" type="Label" parent="TopPanel/TopLeftContainer"]
+layout_mode = 2
+size_flags_horizontal = 10
+theme_override_font_sizes/font_size = 28
+text = "Depth:"
+
+[node name="depthNumberLabel" type="Label" parent="TopPanel/TopLeftContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 28
+text = "1"
+
+[node name="MoneyLabel" type="Label" parent="TopPanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 28
+text = "$69420"
+
+[node name="CrewmateDetailPanel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -277.0
+offset_top = -152.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="Crewmate" type="Sprite2D" parent="CrewmateDetailPanel"]
+position = Vector2(67, 75)
+scale = Vector2(1.32031, 1.32031)
+texture = ExtResource("1_1e56o")
+
+[node name="StatusAndEnergy" type="VBoxContainer" parent="CrewmateDetailPanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -16.23
+offset_top = -68.0
+offset_right = 102.77
+offset_bottom = 68.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="EnergyTxt" type="Label" parent="CrewmateDetailPanel/StatusAndEnergy"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "Energy:"
+
+[node name="EnergyPercent" type="Label" parent="CrewmateDetailPanel/StatusAndEnergy"]
+layout_mode = 2
+size_flags_horizontal = 5
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 28
+text = "100"
+
+[node name="StatusTxt" type="Label" parent="CrewmateDetailPanel/StatusAndEnergy"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "Status:"
+
+[node name="Status" type="Label" parent="CrewmateDetailPanel/StatusAndEnergy"]
+layout_mode = 2
+size_flags_horizontal = 5
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 28
+text = "Roaming"
+
+[node name="CrewmateSelectBar" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -539.0
+offset_top = -78.0
+offset_right = 268.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Crewmate1" type="Button" parent="CrewmateSelectBar"]
+layout_mode = 2
+icon = ExtResource("1_1e56o")
+
+[node name="ProgressBar" type="ProgressBar" parent="CrewmateSelectBar/Crewmate1"]
+layout_mode = 0
+offset_left = 108.0
+offset_right = 136.0
+offset_bottom = 136.0
+fill_mode = 2
+
+[node name="Crewmate2" type="Button" parent="CrewmateSelectBar"]
+layout_mode = 2
+icon = ExtResource("1_1e56o")
+
+[node name="ProgressBar" type="ProgressBar" parent="CrewmateSelectBar/Crewmate2"]
+layout_mode = 0
+offset_left = 108.0
+offset_right = 136.0
+offset_bottom = 136.0
+fill_mode = 2
+
+[node name="Crewmate3" type="Button" parent="CrewmateSelectBar"]
+layout_mode = 2
+icon = ExtResource("1_1e56o")
+
+[node name="ProgressBar" type="ProgressBar" parent="CrewmateSelectBar/Crewmate3"]
+layout_mode = 0
+offset_left = 108.0
+offset_right = 136.0
+offset_bottom = 136.0
+fill_mode = 2
