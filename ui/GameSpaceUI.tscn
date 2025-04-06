@@ -1,10 +1,12 @@
-[gd_scene load_steps=7 format=3 uid="uid://c0n1ecnhpm6jq"]
+[gd_scene load_steps=9 format=3 uid="uid://c0n1ecnhpm6jq"]
 
 [ext_resource type="Texture2D" uid="uid://bgq4j76pnxxqf" path="res://ui/Assets/Crewmate.png" id="1_1e56o"]
 [ext_resource type="Texture2D" uid="uid://dta3nsymq17rm" path="res://ui/Assets/Icons/DrillIcon.png" id="2_tahe1"]
 [ext_resource type="Texture2D" uid="uid://cg623ieogwpl1" path="res://ui/Assets/Icons/RoamingIcon.png" id="3_b8h37"]
 [ext_resource type="Texture2D" uid="uid://3fucnebebai1" path="res://ui/Assets/Icons/ShootIcon.png" id="4_a6mfk"]
 [ext_resource type="Texture2D" uid="uid://c35ojsqux8puq" path="res://ui/Assets/Icons/BuildIcon.png" id="5_b8h37"]
+[ext_resource type="Script" uid="uid://b28vk5142rmjg" path="res://ui/edit_button.gd" id="6_a6mfk"]
+[ext_resource type="PackedScene" uid="uid://bet4q1u3cr00n" path="res://ui/build_Pop-up.tscn" id="7_u8wyb"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_05xaj"]
 bg_color = Color(0.69, 0.69, 0, 1)
@@ -229,3 +231,7 @@ grow_horizontal = 0
 grow_vertical = 0
 icon = ExtResource("5_b8h37")
 expand_icon = true
+script = ExtResource("6_a6mfk")
+
+[node name="Control" parent="." instance=ExtResource("7_u8wyb")]
+layout_mode = 1
