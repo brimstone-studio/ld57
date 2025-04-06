@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://v6f06s7lnsan"]
+
+[ext_resource type="Script" uid="uid://cm1d0mjntiu20" path="res://world/ship/parts/part.gd" id="1_twid7"]
+[ext_resource type="Texture2D" uid="uid://dmjbs4ust74tt" path="res://world/ship/parts/assets/Kitchen.png" id="2_twid7"]
+
+[node name="PartTurret" type="Node2D"]
+scale = Vector2(0.5, 0.5)
+script = ExtResource("1_twid7")
+grid_size_x = 64
+grid_size_y = 64
+
+[node name="Sprite" type="Sprite2D" parent="."]
+texture = ExtResource("2_twid7")
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(0, -68)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+polygon = PackedVector2Array(-66, -62, 194, -62, 194, 198, -194, 198, -194, 66, -66, 66)

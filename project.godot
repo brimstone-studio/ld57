@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 ShipEditingManager="*res://globals/ship_editing_manager.gd"
 MoneyManager="*res://globals/money_manager.gd"
+CrewmateSelectionManager="*res://globals/crewmate_selection_manager.gd"
 
 [display]
 

@@ -53,9 +53,9 @@ func _process(delta: float) -> void:
 		global_position = snapped_pos + Vector2(grid_size_x / 2, grid_size_y / 2)
 		
 		# Rotate on right-click
-		if Input.is_action_just_pressed("rotate_room"):
+		if Input.is_action_just_pressed("right_click"):
 			rotation += deg_to_rad(90)
 			
-		if Input.is_action_just_pressed("place_room"):
+		if Input.is_action_just_pressed("left_click"):
 			if _is_placable == true && is_ghost_mode == true:
 				is_ghost_mode = false

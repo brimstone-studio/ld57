@@ -11,7 +11,6 @@ height = 86.0
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_y50gc"]
 
 [node name="Crewmate" type="CharacterBody2D"]
-input_pickable = true
 script = ExtResource("1_mgfst")
 
 [node name="Head" type="Sprite2D" parent="."]

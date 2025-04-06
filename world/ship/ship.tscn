@@ -1,10 +1,20 @@
-[gd_scene load_steps=3 format=3 uid="uid://bsvikc0ysdfhq"]
+[gd_scene load_steps=4 format=3 uid="uid://bsvikc0ysdfhq"]
 
 [ext_resource type="Script" uid="uid://dvg6eowp401ax" path="res://world/ship/ship.gd" id="1_jakuc"]
 [ext_resource type="PackedScene" uid="uid://c6lcc4qq6aqlx" path="res://world/ship/parts/part_bedroom.tscn" id="3_r8adt"]
+[ext_resource type="PackedScene" uid="uid://br4dqkgg1to18" path="res://world/Crewmates/crewmate.tscn" id="3_vf46i"]
 
 [node name="Ship" type="Node2D"]
 script = ExtResource("1_jakuc")
 
 [node name="PartBedroom" parent="." instance=ExtResource("3_r8adt")]
 position = Vector2(192, 192)
+
+[node name="Crewmate" parent="." instance=ExtResource("3_vf46i")]
+position = Vector2(298, 387)
+
+[node name="Crewmate3" parent="." instance=ExtResource("3_vf46i")]
+position = Vector2(934, 364)
+
+[node name="Crewmate2" parent="." instance=ExtResource("3_vf46i")]
+position = Vector2(774, 203)

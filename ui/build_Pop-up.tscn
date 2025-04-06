@@ -357,6 +357,7 @@ size_flags_horizontal = 4
 text = "$3000"
 
 [node name="Door" type="Button" parent="Panel"]
+layout_mode = 0
 offset_right = 41.0
 offset_bottom = 41.0
 size_flags_horizontal = 3
