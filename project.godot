@@ -24,6 +24,10 @@ MoneyManager="*res://globals/money_manager.gd"
 
 window/stretch/mode="viewport"
 
+[dotnet]
+
+project/assembly_name="LD57"
+
 [input]
 
 rotate_room={
