@@ -1,4 +1,13 @@
-[gd_scene format=3 uid="uid://cxkj6irja1nfj"]
+[gd_scene load_steps=5 format=3 uid="uid://cxkj6irja1nfj"]
+
+[ext_resource type="Texture2D" uid="uid://r5rvlbib5rnt" path="res://ui/Assets/Icons/Enemy.png" id="1_ntrfh"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ih7qu"]
+bg_color = Color(1, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ntrfh"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tw3du"]
 
 [node name="NavigatorPanelPop-up" type="Control"]
 layout_mode = 3
@@ -8,7 +17,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Panel" type="Panel" parent="."]
+[node name="NavigatorPanel" type="Panel" parent="."]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -21,3 +30,266 @@ offset_right = 320.0
 offset_bottom = 185.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="TopPanel" type="Panel" parent="NavigatorPanel"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 40.0
+grow_horizontal = 2
+
+[node name="NavigatorPanelTxt" type="Label" parent="NavigatorPanel/TopPanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Navigator Panel"
+
+[node name="Button" type="Button" parent="NavigatorPanel/TopPanel"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 6.0
+offset_top = -16.0
+offset_right = 38.0
+offset_bottom = 16.0
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_ih7qu")
+text = "x"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="NavigatorPanel/TopPanel"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -102.0
+offset_top = -16.0
+offset_right = -4.0
+offset_bottom = 16.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="DepthTxt" type="Label" parent="NavigatorPanel/TopPanel/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Depth:"
+horizontal_alignment = 2
+
+[node name="Label2" type="Label" parent="NavigatorPanel/TopPanel/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "1"
+horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="NavigatorPanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -215.0
+offset_top = -95.5
+offset_right = 215.0
+offset_bottom = 95.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="NavigatorPanel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_ntrfh")
+
+[node name="DifficultyTxt" type="Label" parent="NavigatorPanel/VBoxContainer/Panel"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 13.0
+offset_top = -11.0
+offset_right = 83.0
+offset_bottom = 12.0
+grow_vertical = 2
+size_flags_horizontal = 0
+text = "Difficutly"
+
+[node name="DifficultyTxt2" type="Label" parent="NavigatorPanel/VBoxContainer/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -35.0
+offset_top = -11.5
+offset_right = 35.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+text = "Potential"
+horizontal_alignment = 1
+
+[node name="Sprite2D2" type="Sprite2D" parent="NavigatorPanel/VBoxContainer/Panel"]
+position = Vector2(409, 22)
+rotation = -1.5708
+scale = Vector2(0.274395, 0.274395)
+texture = ExtResource("1_ntrfh")
+
+[node name="HardBtn" type="Button" parent="NavigatorPanel/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 5
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="NavigatorPanel/VBoxContainer/HardBtn"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -202.0
+offset_top = -19.5
+offset_right = 203.0
+offset_bottom = 19.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="DifficultyTxt" type="Label" parent="NavigatorPanel/VBoxContainer/HardBtn/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 7
+theme_override_font_sizes/font_size = 28
+text = "Hard"
+
+[node name="PotentialRevenue" type="Label" parent="NavigatorPanel/VBoxContainer/HardBtn/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 7
+theme_override_font_sizes/font_size = 28
+text = "$4320"
+horizontal_alignment = 1
+
+[node name="EnemyNumbers" type="Label" parent="NavigatorPanel/VBoxContainer/HardBtn/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 7
+theme_override_font_sizes/font_size = 28
+text = "6"
+horizontal_alignment = 2
+
+[node name="MediumBtn" type="Button" parent="NavigatorPanel/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 5
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="NavigatorPanel/VBoxContainer/MediumBtn"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -202.0
+offset_top = -19.5
+offset_right = 203.0
+offset_bottom = 19.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="DifficultyTxt" type="Label" parent="NavigatorPanel/VBoxContainer/MediumBtn/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 7
+theme_override_font_sizes/font_size = 28
+text = "Medium"
+
+[node name="PotentialRevenue" type="Label" parent="NavigatorPanel/VBoxContainer/MediumBtn/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 7
+theme_override_font_sizes/font_size = 28
+text = "$2880"
+horizontal_alignment = 1
+
+[node name="EnemyNumbers" type="Label" parent="NavigatorPanel/VBoxContainer/MediumBtn/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 7
+theme_override_font_sizes/font_size = 28
+text = "4"
+horizontal_alignment = 2
+
+[node name="EasyBtn" type="Button" parent="NavigatorPanel/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 5
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="NavigatorPanel/VBoxContainer/EasyBtn"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -202.0
+offset_top = -19.5
+offset_right = 203.0
+offset_bottom = 19.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="DifficultyTxt" type="Label" parent="NavigatorPanel/VBoxContainer/EasyBtn/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 7
+theme_override_font_sizes/font_size = 28
+text = "Easy"
+
+[node name="PotentialRevenue" type="Label" parent="NavigatorPanel/VBoxContainer/EasyBtn/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 7
+theme_override_font_sizes/font_size = 28
+text = "$2160"
+horizontal_alignment = 1
+
+[node name="EnemyNumbers" type="Label" parent="NavigatorPanel/VBoxContainer/EasyBtn/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 7
+theme_override_font_sizes/font_size = 28
+text = "2"
+horizontal_alignment = 2
+
+[node name="Panel" type="Panel" parent="NavigatorPanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -262.0
+offset_top = -95.0
+offset_right = -218.0
+offset_bottom = 96.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_tw3du")
+
+[node name="Label" type="Label" parent="NavigatorPanel"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -124.5
+offset_top = -31.12
+offset_right = 124.5
+offset_bottom = -8.12
+grow_horizontal = 2
+grow_vertical = 0
+text = "Choose the difficulty of the Shift"
